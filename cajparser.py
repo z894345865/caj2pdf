@@ -288,7 +288,8 @@ class CAJParser(object):
         try:
             check_output(["mutool", "clean", "pdf.tmp", "pdf_toc.pdf"], stderr=STDOUT)
         except CalledProcessError as e:
-            print(e.output.decode("utf-8"))
+            # print(e.output.decode("utf-8"))
+            print(e.output.decode("GB2312"))
             raise SystemExit("Command mutool returned non-zero exit status " + str(e.returncode))
 
         # Add Outlines

@@ -1,0 +1,14 @@
+# 打印文件基本信息（文件类型、页面数、大纲项目数）
+python caj2pdf show [input_file]
+
+# 转换文件
+python caj2pdf convert test.caj -o output.pdf
+
+# 从 CAJ 文件中提取大纲信息并添加至 PDF 文件
+## 遇到不支持的文件类型或 Bug 时，可用 CAJViewer 打印 PDF 文件，并用这条命令为其添加大纲
+python caj2pdf outlines [input_file] -o/--output [pdf_file]
+
+# 修改说明
+## 在文件中下载添加了mutool工具
+## 在cajparser.py中将utf-8修改为了GB2312
+## 在subprocess.py中将shell值修改为了True
